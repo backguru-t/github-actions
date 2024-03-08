@@ -15,7 +15,7 @@ Github Action은 빌드, 테스트, 배포 파이프라인을 자동화할 수 �
 - Actions: 사용자가 작성한 task를 지정할 수 도 있고 이미 만들어진 action을 지정할 수 도 있다. 이것은 반복적인 코드를 줄이고 재사용을 위해 사용될 수 있다. 본인의 action을 생성하기 위해서는 [Creating actions](https://docs.github.com/en/actions/creating-actions)를 참조한다.
 - Runners: 워크플로우가 실행되는 서버를 의미한다. GitHub는 Ubuntu Linux, Microsoft Windows, 그리고 macOS VM을 제공한다. 기본으로 제공되는 runner를 사용하는 반면 사용자 정의 runner를 지정할수 도 있다.
 
-## workflow 예제
+## Workflow 예제
 ```yaml
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
@@ -50,6 +50,7 @@ jobs:
 
 ## 다른 action 참조하기
 **동일한 repository 내에 존재하는 action 추가하기**
+
 예를 들어, 다음과 같은 폴더 구조로 되어 있는 경우에 `my-first-workflow.yml`가 `hello-world-action/action.yml`을 참조한다면 다음과 같다.
 ```bash
 |-- hello-world (repository)
@@ -75,7 +76,8 @@ jobs:
 ```
 
 **다른 repository 내에 존재하는 action 추가하기**
-만약 다른 repository 내에 존재하는 action을 추가한다면 `{owner}/repo}@{ref}` 형식으로 지정한다. 
+
+만약 다른 repository 내에 존재하는 action을 추가한다면 `{owner}/{repo}@{ref}` 형식으로 지정한다. 
 
 ```yaml
 jobs:

@@ -1,0 +1,13 @@
+name: PR summarizer
+
+on: pull_request
+
+jobs:
+  PR-summarizer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
